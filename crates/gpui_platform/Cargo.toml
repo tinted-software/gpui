@@ -64,6 +64,9 @@ gpui = { workspace = true, features = ["windows-manifest"] }
 [target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies]
 gpui_linux.workspace = true
 
+[target.'cfg(target_os = "android")'.dependencies]
+gpui_android.workspace = true
+
 [target.'cfg(target_family = "wasm")'.dependencies]
 gpui_web = { path = "../gpui_web", version = "0.4.0", package = "gpui_ce_web", default-features = false }
 console_error_panic_hook.workspace = true
